@@ -6,3 +6,5 @@ $ sbt
 > container:stop
 > exit
 
+content url once jetty started : http://localhost:8080/
+
