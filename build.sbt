@@ -3,21 +3,23 @@ seq(webSettings :_*)
 
 name := "scala-jspservlet-dummy-project"
 
-version := "v2013-03-25"
+version := "v2014-01-30"
 
-scalaVersion := "2.10.1"
+scalaVersion := "2.10.3"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature" )
 
 
 libraryDependencies ++= Seq(
-     "org.mortbay.jetty" % "jetty" % "6.1.26" % "container"
-    ,"org.mortbay.jetty" % "jsp-2.1-glassfish" % "9.1.1.B60.25.p2" % "container"
+  "org.eclipse.jetty" % "jetty-webapp" % "9.1.0.v20131115" % "container",
+  "org.eclipse.jetty" % "jetty-plus"   % "9.1.0.v20131115" % "container"
 )
 
+libraryDependencies += "javax.servlet" % "servlet-api" % "2.5" % "provided"
+
 libraryDependencies ++= Seq(
-    "ch.qos.logback" % "logback-classic" % "1.0.10",
-    "org.scalatest" %% "scalatest" % "1.9.+" % "test",
+    "com.typesafe" %% "scalalogging-slf4j" % "1.0.1",
+    "org.scalatest" %% "scalatest" % "2.0" % "test",
     "junit" % "junit" % "4.+" % "test"
 )
 
